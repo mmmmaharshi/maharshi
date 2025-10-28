@@ -1,0 +1,11 @@
+@import "@picocss/pico/css/pico.min.css";
+
+:root {
+    --pico-font-family:
+        ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+        "Liberation Mono", monospace, var(--pico-font-family-emoji);
+}
+
+body {
+    scrollbar-gutter: stable;
+}
