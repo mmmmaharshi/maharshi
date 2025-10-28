@@ -1,9 +1,9 @@
+<script>
+    import pic from "/pic.jpg";
+</script>
+
 <main>
-    <img
-        src="/pic.jpg"
-        alt="profile_picture"
-        style="width: 150px; height: 150px;"
-    />
+    <img src={pic} alt="profile_picture" style="width: 150px; height: 150px;" />
     <hgroup style="margin-top: 40px;">
         <h2>
             I’m <span style="color: var(--pico-primary)">Manohar Maharshi</span>
