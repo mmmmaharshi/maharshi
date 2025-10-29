@@ -32,4 +32,9 @@
         align-items: start;
         justify-content: center;
     }
+    @media (max-width: 768px) {
+        main {
+            width: 100%;
+        }
+    }
 </style>
