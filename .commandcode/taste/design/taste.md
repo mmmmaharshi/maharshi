@@ -1,5 +1,8 @@
 # Design Preferences
 
+## Content & Persona
+- Prefers personality-forward, playful, and human-centric bios/website copy over strictly formal or academic phrasing (e.g., choosing "personality-first" tone for an Assistant Professor bio). Confidence: 0.8
+
 ## UI Theme
 - Prefers dark mode over light mode for web interfaces. Confidence: 0.8
 
