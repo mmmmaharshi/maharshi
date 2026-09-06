@@ -3,6 +3,7 @@
 ## Tooling Preferences
 - Uses Vite as the build tool. Confidence: 0.6
 - Uses `npx skills` to add agent capabilities/skills. Confidence: 0.5
+- Prefers using `agent-browser` for visual testing and verification of web pages. Confidence: 0.7
 
 ## Language/Framework Preferences
 - Prefers vanilla JavaScript over frameworks when given a choice. Confidence: 0.5

@@ -1,139 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/jpeg" href="pic.jpg" />
-    <title>Maharshi</title>
-    <style>
-        :root {
-            --font-sans: 'Inter Variable', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            --color-canvas: #ffffff;
-            --color-ink-primary: #000000;
-            --color-ink-secondary: rgb(0 0 0 / 64%);
-            --color-ink-tertiary: rgb(0 0 0 / 44%);
-            --color-border: rgb(0 0 0 / 10%);
-            --color-hover: rgb(0 0 0 / 5%);
-            --radius: 8px;
-            --space-unit: 8px;
-        }
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Maharshi</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Geist+Pixel&display=swap"
+			rel="stylesheet" />
+		<style>
+			:root {
+				--font-sans: 'Geist Pixel', system-ui;
+				--color-canvas: #0a0a0a;
+				--color-ink-primary: #ffffff;
+				--color-ink-secondary: rgb(255 255 255 / 56%);
+				--color-ink-tertiary: rgb(255 255 255 / 50%);
+				--color-border: rgb(255 255 255 / 10%);
+				--color-hover: rgb(255 255 255 / 9%);
+				--radius: 8px;
+				--space-unit: 8px;
+			}
 
-        *, *::before, *::after {
-            box-sizing: border-box;
-        }
+			*,
+			*::before,
+			*::after {
+				box-sizing: border-box;
+			}
 
-        html {
-            -webkit-text-size-adjust: 100%;
-            text-size-adjust: 100%;
-        }
+			html {
+				-webkit-text-size-adjust: 100%;
+				text-size-adjust: 100%;
+			}
 
-        body {
-            margin: 0;
-            padding: 0;
-            min-height: 100svh;
-            display: flex;
-            align-items: center;
-            font-family: var(--font-sans);
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 1.5;
-            color: var(--color-ink-primary);
-            background-color: var(--color-canvas);
-        }
+			body {
+				margin: 0;
+				padding: 0;
+				min-height: 100svh;
+				display: flex;
+				align-items: center;
+				font-family: var(--font-sans);
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 1.5;
+				color: var(--color-ink-primary);
+				background-color: var(--color-canvas);
+			}
 
-        main {
-            width: 100%;
-            max-width: 680px;
-            margin: 0 auto;
-            padding: calc(var(--space-unit) * 8);
-            display: flex;
-            flex-direction: column;
-            gap: calc(var(--space-unit) * 5);
-        }
+			main {
+				width: 100%;
+				max-width: 680px;
+				margin: 0 auto;
+				padding: calc(var(--space-unit) * 8);
+				display: flex;
+				flex-direction: column;
+				gap: calc(var(--space-unit) * 5);
+			}
 
-        @media (max-width: 768px) {
-            main {
-                padding: calc(var(--space-unit) * 3);
-                gap: calc(var(--space-unit) * 4);
-            }
-        }
+			@media (max-width: 768px) {
+				main {
+					padding: calc(var(--space-unit) * 3);
+					gap: calc(var(--space-unit) * 4);
+				}
+			}
 
-        img[alt='profile_picture'] {
-            width: 150px;
-            height: 150px;
-            border-radius: var(--radius);
-            display: block;
-        }
+			img[alt='profile_picture'] {
+				width: 150px;
+				height: 150px;
+				border-radius: var(--radius);
+				display: block;
+			}
 
-        hgroup {
-            display: flex;
-            flex-direction: column;
-            gap: calc(var(--space-unit) * 1.5);
-        }
+			hgroup {
+				display: flex;
+				flex-direction: column;
+				gap: calc(var(--space-unit) * 1.5);
+			}
 
-        h2 {
-            margin: 0;
-            font-size: 1.75rem;
-            font-weight: 600;
-            line-height: 1.15;
-            letter-spacing: -0.01em;
-            color: var(--color-ink-primary);
-        }
+			h2 {
+				margin: 0;
+				font-size: 1.75rem;
+				font-weight: 600;
+				line-height: 1.15;
+				letter-spacing: -0.01em;
+				color: var(--color-ink-primary);
+			}
 
-        p {
-            margin: 0;
-            font-size: 1rem;
-            line-height: 1.5;
-            color: var(--color-ink-secondary);
-        }
+			p {
+				margin: 0;
+				font-size: 1rem;
+				line-height: 1.5;
+				color: var(--color-ink-secondary);
+			}
 
-        nav {
-            display: flex;
-            gap: calc(var(--space-unit) * 3);
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+			nav {
+				display: flex;
+				gap: calc(var(--space-unit) * 3);
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
 
-        nav a {
-            display: inline-block;
-            padding: calc(var(--space-unit)) calc(var(--space-unit) * 1.5);
-            font-size: 0.9375rem;
-            font-weight: 500;
-            line-height: 1;
-            color: var(--color-ink-primary);
-            text-decoration: none;
-            border-radius: var(--radius);
-            transition: background-color 150ms ease-out;
-        }
+			nav a {
+				display: inline-block;
+				padding: calc(var(--space-unit)) calc(var(--space-unit) * 1.5);
+				font-size: 0.9375rem;
+				font-weight: 500;
+				line-height: 1;
+				color: var(--color-ink-primary);
+				text-decoration: none;
+				border-radius: var(--radius);
+				transition: background-color 150ms ease-out;
+			}
 
-        nav a:hover {
-            background-color: var(--color-hover);
-        }
+			nav a:hover {
+				background-color: var(--color-hover);
+			}
 
-        nav a:focus-visible {
-            outline: 2px solid var(--color-ink-primary);
-            outline-offset: 2px;
-        }
+			nav a:focus-visible {
+				outline: 2px solid var(--color-ink-primary);
+				outline-offset: 2px;
+			}
 
-        @media (prefers-reduced-motion: reduce) {
-            nav a {
-                transition: none;
-            }
-        }
-    </style>
-</head>
-<body>
-    <main>
-        <hgroup>
-            <h2>I'm Manohar Maharshi</h2>
-            <p>Assistant Professor with a soft spot for the web — I teach, experiment, and dive into whatever's new and interesting in the online space.</p>
-        </hgroup>
-        <nav>
-            <a href="https://x.com/mmmmaharshi" target="_blank" rel="noopener noreferrer">X</a>
-            <a href="https://github.com/mmmmaharshi" target="_blank" rel="noopener noreferrer">Github</a>
-            <a href="https://www.linkedin.com/in/manohar-maharshi/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </nav>
-    </main>
-</body>
+			@media (prefers-reduced-motion: reduce) {
+				nav a {
+					transition: none;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<hgroup>
+				<h2>I'm Manohar Maharshi</h2>
+				<p>
+					Assistant Professor with a soft spot for the web — I teach,
+					experiment, and dive into whatever's new and interesting in the
+					online space.
+				</p>
+			</hgroup>
+			<nav>
+				<a
+					href="https://x.com/mmmmaharshi"
+					target="_blank"
+					rel="noopener noreferrer">
+					X
+				</a>
+				<a
+					href="https://github.com/mmmmaharshi"
+					target="_blank"
+					rel="noopener noreferrer">
+					Github
+				</a>
+				<a
+					href="https://www.linkedin.com/in/manohar-maharshi/"
+					target="_blank"
+					rel="noopener noreferrer">
+					LinkedIn
+				</a>
+			</nav>
+		</main>
+	</body>
 </html>
