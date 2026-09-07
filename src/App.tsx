@@ -1,21 +1,15 @@
 import * as stylex from '@stylexjs/stylex';
-import { fonts, colors, radii, space } from './tokens.stylex';
+import { colors, radii, space } from './tokens.stylex';
 
 const styles = stylex.create({
   main: {
     width: '100%',
     maxWidth: 680,
     margin: '0 auto',
-    padding: {
-      default: `calc(${space.unit} * 8)`,
-      '@media (max-width: 768px)': `calc(${space.unit} * 3)`,
-    },
+    padding: `calc(${space.unit} * 8)`,
     display: 'flex',
     flexDirection: 'column',
-    gap: {
-      default: `calc(${space.unit} * 3)`,
-      '@media (max-width: 768px)': `calc(${space.unit} * 4)`,
-    },
+    gap: `calc(${space.unit} * 3)`,
   },
   hgroup: {
     display: 'flex',
@@ -63,10 +57,7 @@ const styles = stylex.create({
       default: null,
       ':focus-visible': 2,
     },
-    transition: {
-      default: 'background-color 150ms ease-out',
-      '@media (prefers-reduced-motion: reduce)': 'none',
-    },
+    transition: 'background-color 150ms ease-out',
   },
 });
 
