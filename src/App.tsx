@@ -4,11 +4,13 @@ import { colors, radii, space } from './tokens.stylex';
 const styles = stylex.create({
   main: {
     width: '100%',
+    minHeight: '100dvh',
     maxWidth: 680,
     margin: '0 auto',
     padding: `calc(${space.unit} * 8)`,
     display: 'flex',
     flexDirection: 'column',
+    justifyContent: 'center',
     gap: `calc(${space.unit} * 3)`,
   },
   hgroup: {
