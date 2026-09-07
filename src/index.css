@@ -1,0 +1,26 @@
+@stylex;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  font-family: 'Geist Pixel', system-ui;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ffffff;
+  background-color: #0a0a0a;
+}

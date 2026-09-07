@@ -4,13 +4,10 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Manohar Maharshi — Assistant Professor & Web Enthusiast</title>
-		<meta
-			name="description"
-			content="Maharshi Portfolio"
-		/>
+		<meta name="description" content="Maharshi Portfolio" />
 		<meta name="robots" content="index, follow" />
 		<link rel="canonical" href="https://maharshi.work/" />
-		<link rel="icon" href="/favicon.ico" />
+		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 		<meta name="theme-color" content="#0a0a0a" />
 
 		<meta property="og:title" content="Manohar Maharshi" />
@@ -40,7 +37,8 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Geist+Pixel&display=swap"
-			rel="stylesheet" />
+			rel="stylesheet"
+		/>
 		<script type="application/ld+json">
 			{
 				"@context": "https://schema.org",
@@ -52,142 +50,9 @@
 				"sameAs": ["https://github.com/mmmmaharshi"]
 			}
 		</script>
-		<style>
-			:root {
-				--font-sans: 'Geist Pixel', system-ui;
-				--color-canvas: #0a0a0a;
-				--color-ink-primary: #ffffff;
-				--color-ink-secondary: rgb(255 255 255 / 56%);
-				--color-ink-tertiary: rgb(255 255 255 / 50%);
-				--color-border: rgb(255 255 255 / 10%);
-				--color-hover: rgb(255 255 255 / 9%);
-				--radius: 8px;
-				--space-unit: 8px;
-			}
-
-			*,
-			*::before,
-			*::after {
-				box-sizing: border-box;
-			}
-
-			html {
-				-webkit-text-size-adjust: 100%;
-				text-size-adjust: 100%;
-			}
-
-			body {
-				margin: 0;
-				padding: 0;
-				min-height: 100svh;
-				display: flex;
-				align-items: center;
-				font-family: var(--font-sans);
-				font-weight: 400;
-				font-size: 16px;
-				line-height: 1.5;
-				color: var(--color-ink-primary);
-				background-color: var(--color-canvas);
-			}
-
-			main {
-				width: 100%;
-				max-width: 680px;
-				margin: 0 auto;
-				padding: calc(var(--space-unit) * 8);
-				display: flex;
-				flex-direction: column;
-				gap: calc(var(--space-unit) * 3);
-			}
-
-			@media (max-width: 768px) {
-				main {
-					padding: calc(var(--space-unit) * 3);
-					gap: calc(var(--space-unit) * 4);
-				}
-			}
-
-			img[alt='profile_picture'] {
-				width: 150px;
-				height: 150px;
-				border-radius: var(--radius);
-				display: block;
-			}
-
-			hgroup {
-				display: flex;
-				flex-direction: column;
-				gap: calc(var(--space-unit) * 2);
-			}
-
-			h2 {
-				margin: 0;
-				font-size: 1.75rem;
-				font-weight: 600;
-				line-height: 1.15;
-				letter-spacing: -0.01em;
-				color: var(--color-ink-primary);
-			}
-
-			p {
-				margin: 0;
-				font-size: 1rem;
-				line-height: 1.5;
-				color: var(--color-ink-secondary);
-			}
-
-			nav {
-				display: flex;
-				gap: calc(var(--space-unit) * 6);
-				list-style: none;
-				padding: 0;
-				margin: 0;
-			}
-
-			nav a {
-				display: inline-block;
-				font-size: 0.9375rem;
-				font-weight: 500;
-				line-height: 1;
-				color: var(--color-ink-primary);
-				text-decoration: none;
-				border-radius: var(--radius);
-				transition: background-color 150ms ease-out;
-			}
-
-			nav a:hover {
-				background-color: var(--color-hover);
-			}
-
-			nav a:focus-visible {
-				outline: 2px solid var(--color-ink-primary);
-				outline-offset: 2px;
-			}
-
-			@media (prefers-reduced-motion: reduce) {
-				nav a {
-					transition: none;
-				}
-			}
-		</style>
 	</head>
 	<body>
-		<main>
-			<hgroup>
-				<h2>I'm Manohar Maharshi</h2>
-				<p>
-					By day: Assistant Professor. By habit: digging into whatever's
-					new on the web.
-				</p>
-			</hgroup>
-			<nav>
-				<a
-					href="https://github.com/mmmmaharshi"
-					target="_blank"
-					rel="noopener noreferrer">
-					Github
-				</a>
-			</nav>
-		</main>
+		<div id="root"></div>
+		<script type="module" src="/src/main.tsx"></script>
 	</body>
 </html>
